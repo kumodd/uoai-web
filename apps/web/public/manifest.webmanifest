@@ -1,0 +1,9 @@
+{
+  "name": "Universal Offline AI (UOAI)",
+  "short_name": "UOAI",
+  "description": "Privacy-first, offline-capable local AI provider running in your browser.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#4f46e5"
+}

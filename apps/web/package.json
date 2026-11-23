@@ -1,0 +1,23 @@
+{
+  "name": "@uoai/web",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@uoai/api-protocol": "*",
+    "@uoai/browser-bridge": "*",
+    "@uoai/model-registry": "*",
+    "@uoai/sdk": "*",
+    "@uoai/shared-types": "*",
+    "@uoai/ui": "*",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zustand": "^5.0.3"
+  }
+}

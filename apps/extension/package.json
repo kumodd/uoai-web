@@ -1,0 +1,22 @@
+{
+  "name": "@uoai/extension",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^3.8.1",
+    "@uoai/api-protocol": "*",
+    "@uoai/browser-bridge": "*",
+    "@uoai/inference-core": "*",
+    "@uoai/model-adapters": "*",
+    "@uoai/model-registry": "*",
+    "@uoai/model-storage": "*",
+    "@uoai/shared-types": "*",
+    "@uoai/ui": "*"
+  }
+}

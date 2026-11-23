@@ -1,0 +1,31 @@
+{
+  "name": "@uoai/model-adapters",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean --external @huggingface/transformers",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@uoai/model-registry": "*",
+    "@uoai/shared-types": "*"
+  },
+  "peerDependencies": {
+    "@huggingface/transformers": "^3.4.0"
+  },
+  "peerDependenciesMeta": {
+    "@huggingface/transformers": {
+      "optional": true
+    }
+  }
+}

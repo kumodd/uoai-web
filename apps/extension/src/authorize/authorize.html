@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Authorize Website — Universal Offline AI</title>
+    <style>
+      body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 24px; background: #0f172a; color: #f8fafc; }
+      .box { max-width: 420px; margin: 0 auto; background: #1e293b; border: 1px solid #334155; border-radius: 14px; padding: 20px; }
+      h1 { font-size: 18px; margin: 0 0 8px; }
+      .origin { font-family: monospace; background: #0f172a; padding: 8px 10px; border-radius: 8px; margin: 12px 0; font-size: 13px; }
+      ul { padding-left: 18px; font-size: 13px; color: #cbd5e1; }
+      .actions { display: flex; gap: 10px; margin-top: 18px; }
+      button { flex: 1; border: 0; border-radius: 8px; padding: 10px; font-size: 14px; font-weight: 600; cursor: pointer; }
+      .allow { background: #4f46e5; color: #fff; }
+      .deny { background: #334155; color: #f8fafc; }
+      .err { color: #fb7185; font-size: 13px; }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>Allow Website to Use Local AI?</h1>
+      <div class="origin" id="target-origin">Validating…</div>
+      <p id="validation-error" class="err"></p>
+      <div id="consent-details">
+        <p style="font-size:13px;font-weight:600;margin-bottom:4px;">This website CAN:</p>
+        <ul>
+          <li>List installed Ready models</li>
+          <li>Send stateless prompts to your local model and receive responses</li>
+        </ul>
+        <p style="font-size:13px;font-weight:600;margin-bottom:4px;">This website CANNOT:</p>
+        <ul>
+          <li>Read your Workspace conversations or local files</li>
+          <li>Download models or access other websites</li>
+        </ul>
+        <div class="actions">
+          <button class="deny" id="btn-deny">Deny</button>
+          <button class="allow" id="btn-allow">Allow &amp; Grant Permission</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./authorize.js"></script>
+  </body>
+</html>

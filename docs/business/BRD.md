@@ -51,6 +51,8 @@ This BRD is the authoritative entry point. Detailed, ID-level requirements live 
 | Architecture | [MODEL_COMPATIBILITY_REQUIREMENTS.md](../architecture/MODEL_COMPATIBILITY_REQUIREMENTS.md) | Model qualification process, manifest, candidate model |
 | Decisions | [OPEN_QUESTIONS.md](../decisions/OPEN_QUESTIONS.md) | OQ-01 – OQ-22 unresolved decisions |
 | Decisions | [ARCHITECTURE_DECISIONS.md](../decisions/ARCHITECTURE_DECISIONS.md) | ADR-001 – ADR-012 |
+| Developer | [INTEGRATION_GUIDE.md](../developer/INTEGRATION_GUIDE.md) | Website & MV3 extension integration guide (`@uoai/sdk`) |
+| Developer | [AI_INTEGRATION_PROMPT.md](../developer/AI_INTEGRATION_PROMPT.md) | Copy-and-paste prompts for integrating UOAI into existing websites & extensions |
 
 ### Requirement ID conventions
 

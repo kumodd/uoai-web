@@ -1,0 +1,45 @@
+{
+  "name": "uoai-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Universal Offline AI (UOAI) — Privacy-first, offline-capable local AI provider in Chromium browsers",
+  "license": "Apache-2.0",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "npm run build:packages && npm run build:apps",
+    "build:packages": "npm run build -w @uoai/shared-types && npm run build -w @uoai/api-protocol && npm run build -w @uoai/model-registry && npm run build -w @uoai/model-storage && npm run build -w @uoai/model-adapters && npm run build -w @uoai/inference-core && npm run build -w @uoai/browser-bridge && npm run build -w @uoai/sdk && npm run build -w @uoai/ui",
+    "build:apps": "npm run build -w @uoai/web && npm run build -w @uoai/extension && npm run build -w @uoai/demo",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "lint:boundaries": "node scripts/check-boundaries.mjs",
+    "lint:static-assets": "node scripts/check-static-assets.mjs",
+    "test:all": "npm run build && npm run typecheck && npm run lint:boundaries && npm run lint:static-assets && npm test && npm run test:e2e"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/chrome": "^0.0.313",
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.21",
+    "esbuild": "^0.25.0",
+    "fake-indexeddb": "^6.0.0",
+    "jsdom": "^26.0.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.2",
+    "vitest": "^3.0.9"
+  }
+}
